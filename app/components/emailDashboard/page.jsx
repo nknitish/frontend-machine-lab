@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState, memo } from "react";
-import "./App.css";
 
 /* -------------------- DATA -------------------- */
 
