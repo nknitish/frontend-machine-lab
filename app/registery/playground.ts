@@ -5,8 +5,14 @@ import PersonSearch from "@/app/components/personSearch/page";
 import ResizeWindow from "@/app/components/resizeWindow/page";
 import TickTacToe from "@/app/components/tictactoe/page";
 import EmailDashboard from "@/app/components/emailDashboard/page";
+import MultiSelect from "../components/multiSelect/page";
 
 export const playgroundItems = [
+  {
+    id: "Multi Select",
+    name: "Multi Select",
+    component: MultiSelect,
+  },
   {
     id: "File Explorer",
     name: "File Explorer",
