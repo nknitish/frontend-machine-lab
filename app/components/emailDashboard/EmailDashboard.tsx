@@ -1,8 +1,19 @@
 import { useEffect, useMemo, useState, memo } from "react";
 
+/* -------------------- TYPES -------------------- */
+
+interface Email {
+  id: string;
+  senderName: string;
+  senderEmail: string;
+  subject: string;
+  time: string;
+  body: string;
+}
+
 /* -------------------- DATA -------------------- */
 
-const rowData = [
+const rowData: Email[] = [
   {
     id: "email_001",
     senderName: "Sarah Johnson",
@@ -31,13 +42,13 @@ const rowData = [
 
 /* -------------------- UTILS -------------------- */
 
-const extractTextFromHTML = (html = "") => {
+const extractTextFromHTML = (html: string = ""): string => {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
   return doc.body.textContent || "";
 };
 
-const highlightText = (text, search) => {
+const highlightText = (text: string, search: string): string => {
   if (!search) return text;
   const regex = new RegExp(`(${search})`, "gi");
   return text.replace(regex, "<mark>$1</mark>");
@@ -45,8 +56,8 @@ const highlightText = (text, search) => {
 
 /* -------------------- HOOKS -------------------- */
 
-const useDebounce = (value, delay = 300) => {
-  const [debounced, setDebounced] = useState(value);
+const useDebounce = (value: string, delay: number = 300): string => {
+  const [debounced, setDebounced] = useState<string>(value);
 
   useEffect(() => {
     const id = setTimeout(() => setDebounced(value), delay);
@@ -58,7 +69,13 @@ const useDebounce = (value, delay = 300) => {
 
 /* -------------------- COMPONENTS -------------------- */
 
-const EmailBody = ({ text, search, expanded }) => {
+interface EmailBodyProps {
+  text: string;
+  search: string;
+  expanded: boolean;
+}
+
+const EmailBody = ({ text, search, expanded }: EmailBodyProps) => {
   const displayText = expanded ? text : text.slice(0, 120) + "...";
 
   return (
@@ -71,12 +88,17 @@ const EmailBody = ({ text, search, expanded }) => {
   );
 };
 
-const EmailCard = memo(({ email, search }) => {
-  const [expanded, setExpanded] = useState(false);
+interface EmailCardProps {
+  email: Email;
+  search: string;
+}
+
+const EmailCard = memo(({ email, search }: EmailCardProps) => {
+  const [expanded, setExpanded] = useState<boolean>(false);
 
   const plainText = useMemo(
     () => extractTextFromHTML(email.body),
-    [email.body]
+    [email.body],
   );
 
   return (
@@ -104,7 +126,7 @@ const EmailCard = memo(({ email, search }) => {
 /* -------------------- DASHBOARD -------------------- */
 
 const EmailDashboard = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState<string>("");
   const debouncedSearch = useDebounce(search);
 
   const filteredEmails = useMemo(() => {
@@ -117,7 +139,7 @@ const EmailDashboard = () => {
         email.senderName.toLowerCase().includes(q) ||
         email.senderEmail.toLowerCase().includes(q) ||
         email.subject.toLowerCase().includes(q) ||
-        extractTextFromHTML(email.body).toLowerCase().includes(q)
+        extractTextFromHTML(email.body).toLowerCase().includes(q),
     );
   }, [debouncedSearch]);
 
