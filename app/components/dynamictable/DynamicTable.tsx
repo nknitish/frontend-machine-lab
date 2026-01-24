@@ -1,22 +1,36 @@
 import { useEffect, useState } from "react";
 
-const Table = ({ title, data = [], onDataChange }) => {
+interface DataItem {
+  [key: string]: string | number | object | null | undefined;
+}
+
+interface TableProps {
+  title: string;
+  data?: DataItem[];
+  onDataChange: (data: DataItem[]) => void;
+}
+
+const Table = ({ title, data = [], onDataChange }: TableProps) => {
   const keys = Object.keys(data[0] || {});
 
-  const formatObjectValue = (obj) => {
+  const formatObjectValue = (obj: unknown): string => {
     if (typeof obj !== "object" || obj === null) return String(obj);
     return Object.entries(obj)
-      .filter(([key, value]) => typeof value !== "object")
+      .filter(([_, value]) => typeof value !== "object")
       .map(([key, value]) => `${key}: ${value}`)
       .join(", ");
   };
 
-  const handleCellClick = (rowIndex, key, value) => {
+  const handleCellClick = (
+    rowIndex: number,
+    key: string,
+    value: unknown,
+  ): void => {
     if (typeof value === "object") return;
 
-    const newValue = prompt(`Edit ${key}:`, value);
+    const newValue = prompt(`Edit ${key}:`, String(value));
 
-    if (newValue !== null && newValue !== value) {
+    if (newValue !== null && newValue !== String(value)) {
       const updatedData = [...data];
       updatedData[rowIndex][key] = newValue;
       onDataChange(updatedData);
@@ -59,7 +73,9 @@ const Table = ({ title, data = [], onDataChange }) => {
                         }
                         style={{ cursor: isObject ? "default" : "pointer" }}
                       >
-                        {isObject ? formatObjectValue(cellValue) : cellValue}
+                        {isObject
+                          ? formatObjectValue(cellValue)
+                          : String(cellValue)}
                       </td>
                     );
                   })}
@@ -74,14 +90,14 @@ const Table = ({ title, data = [], onDataChange }) => {
 };
 
 const App = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<DataItem[]>([]);
 
-  const getData = () => {
+  const getData = (): void => {
     const url = `https://jsonplaceholder.typicode.com/users`;
 
     fetch(url)
       .then((response) => response.json())
-      .then((result) => {
+      .then((result: DataItem[]) => {
         setData(result);
       })
       .catch((error) => console.error(error));
@@ -91,7 +107,7 @@ const App = () => {
     getData();
   }, []);
 
-  const handleDataChange = (updatedData) => {
+  const handleDataChange = (updatedData: DataItem[]): void => {
     setData(updatedData);
     console.log("Data updated:", updatedData);
   };
