@@ -9,6 +9,8 @@ import MultiSelect from "../components/multiSelect/MultiSelect";
 import Modal from "@/app/components/modal/Modal";
 import DynamicTable from "@/app/components/dynamictable/DynamicTable";
 import Todos from "@/app/components/todos/Todos";
+import TaskManager from "@/app/components/takManager/TaskManager";
+import DragDropImage from "@/app/components/dragDropImage/DragDropImage";
 
 export const playgroundItems = [
   {
@@ -57,6 +59,18 @@ export const playgroundItems = [
     id: "person-search",
     title: "Person Search with Debounce & Filtering",
     component: PersonSearch,
+    level: "medium",
+  },
+  {
+    id: "task-manger",
+    title: "Task Manager with Filtering & Sorting | Admin",
+    component: TaskManager,
+    level: "medium",
+  },
+  {
+    id: "drag-drop-image",
+    title: "Drag and Drop Image Component",
+    component: DragDropImage,
     level: "medium",
   },
   {
