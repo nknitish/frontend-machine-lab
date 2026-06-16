@@ -25,15 +25,17 @@ export default function Dashboard() {
   if (selectedComponent) {
     const Component = selectedComponent.component;
     return (
-      <div className="min-h-screen bg-gray-50 p-6">
+      <div className="relative min-h-screen bg-gray-50 p-6">
         <button
           onClick={() => setSelectedComponent(null)}
-          className="mb-6 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          className="absolute top-6 right-6 z-10 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
         >
-          ← Back to Dashboard
+          ←
         </button>
 
-        <Component />
+        <div className="pt-16">
+          <Component />
+        </div>
       </div>
     );
   }

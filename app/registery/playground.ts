@@ -11,6 +11,7 @@ import DynamicTable from "@/app/components/dynamictable/DynamicTable";
 import Todos from "@/app/components/todos/Todos";
 import TaskManager from "@/app/components/takManager/TaskManager";
 import DragDropImage from "@/app/components/dragDropImage/DragDropImage";
+import Accordion from "@/app/components/accordion/Accordion";
 
 export const playgroundItems = [
   {
@@ -90,5 +91,11 @@ export const playgroundItems = [
     title: "Email Dashboard with Read, Filter & Selection",
     component: EmailDashboard,
     level: "hard",
+  },
+  {
+    id: "accordion",
+    title: "Accordion Component",
+    component: Accordion,
+    level: "medium",
   },
 ];
