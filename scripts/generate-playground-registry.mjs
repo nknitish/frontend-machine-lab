@@ -76,9 +76,7 @@ function getLevel(filePath) {
   const segments = relativePath.split(path.sep).filter(Boolean);
 
   const levelFromSegment = segments.find((segment) =>
-    ["easy", "medium", "advance", "advanced", "hard"].includes(
-      segment.toLowerCase(),
-    ),
+    ["easy", "medium", "advance", "advanced"].includes(segment.toLowerCase()),
   );
 
   if (!levelFromSegment) {
@@ -91,7 +89,7 @@ function getLevel(filePath) {
     case "medium":
       return "medium";
     default:
-      return "hard";
+      return "advance";
   }
 }
 
@@ -110,7 +108,7 @@ lines.push("type PlaygroundItem = {");
 lines.push("  id: string;");
 lines.push("  title: string;");
 lines.push("  component: ComponentType<any>;");
-lines.push('  level: "easy" | "medium" | "hard";');
+lines.push('  level: "easy" | "medium" | "advance";');
 lines.push("};");
 lines.push("");
 

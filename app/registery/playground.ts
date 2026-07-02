@@ -6,7 +6,7 @@ type PlaygroundItem = {
   id: string;
   title: string;
   component: ComponentType<any>;
-  level: "easy" | "medium" | "hard";
+  level: "easy" | "medium" | "advance";
 };
 
 import component0 from "../components/advance/EmailDashboard";
@@ -18,30 +18,31 @@ import component5 from "../components/easy/Modal";
 import component6 from "../components/easy/MultiSelect";
 import component7 from "../components/easy/ResizeWindow";
 import component8 from "../components/easy/Todos";
-import component9 from "../components/medium/DynamicTable";
-import component10 from "../components/medium/Pagination";
-import component11 from "../components/medium/PersonSearch";
-import component12 from "../components/medium/TaskManager";
-import component13 from "../components/medium/TicTacToe";
+import component9 from "../components/easy/UiComponent";
+import component10 from "../components/medium/DynamicTable";
+import component11 from "../components/medium/Pagination";
+import component12 from "../components/medium/PersonSearch";
+import component13 from "../components/medium/TaskManager";
+import component14 from "../components/medium/TicTacToe";
 
 export const playgroundItems: PlaygroundItem[] = [
   {
     id: "email-dashboard",
     title: "Email Dashboard",
     component: component0,
-    level: "hard",
+    level: "advance",
   },
   {
     id: "file-explorer",
     title: "File Explorer",
     component: component1,
-    level: "hard",
+    level: "advance",
   },
   {
     id: "infinite-scroll",
     title: "Infinite Scroll",
     component: component2,
-    level: "hard",
+    level: "advance",
   },
   {
     id: "accordion",
@@ -80,33 +81,39 @@ export const playgroundItems: PlaygroundItem[] = [
     level: "easy",
   },
   {
+    id: "ui-component",
+    title: "Ui Component",
+    component: component9,
+    level: "easy",
+  },
+  {
     id: "dynamic-table",
     title: "Dynamic Table",
-    component: component9,
+    component: component10,
     level: "medium",
   },
   {
     id: "pagination",
     title: "Pagination",
-    component: component10,
+    component: component11,
     level: "medium",
   },
   {
     id: "person-search",
     title: "Person Search",
-    component: component11,
+    component: component12,
     level: "medium",
   },
   {
     id: "task-manager",
     title: "Task Manager",
-    component: component12,
+    component: component13,
     level: "medium",
   },
   {
     id: "tic-tac-toe",
     title: "Tic Tac Toe",
-    component: component13,
+    component: component14,
     level: "medium",
   },
 ];

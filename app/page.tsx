@@ -12,7 +12,7 @@ export default function Dashboard() {
 
   // Sort items based on difficulty level
   const sortedItems = useMemo(() => {
-    const levelOrder = { easy: 1, medium: 2, hard: 3 };
+    const levelOrder = { easy: 1, medium: 2, advance: 3 };
 
     return [...playgroundItems].sort((a, b) => {
       const orderA = levelOrder[a.level as keyof typeof levelOrder] || 0;
@@ -43,7 +43,7 @@ export default function Dashboard() {
   const levelStyles: Record<string, string> = {
     easy: "bg-green-100 text-green-700",
     medium: "bg-yellow-100 text-yellow-700",
-    hard: "bg-red-100 text-red-700",
+    advance: "bg-red-100 text-red-700",
   };
 
   return (
@@ -61,8 +61,8 @@ export default function Dashboard() {
             onChange={(e) => setSortLevel(e.target.value as "asc" | "desc")}
             className="border border-gray-300 rounded-md px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
-            <option value="asc">Easy → Hard</option>
-            <option value="desc">Hard → Easy</option>
+            <option value="asc">Easy → Advance</option>
+            <option value="desc">Advance → Easy</option>
           </select>
         </div>
 
