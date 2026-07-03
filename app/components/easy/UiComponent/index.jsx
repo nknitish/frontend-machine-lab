@@ -8,7 +8,12 @@ const programmingLanguages = ["JavaScript", "React", "Python"];
    Button
 =========================== */
 
-const Button = ({ children, className = "", disabled = false, ...props }) => {
+export const Button = ({
+  children,
+  className = "",
+  disabled = false,
+  ...props
+}) => {
   return (
     <button
       disabled={disabled}
