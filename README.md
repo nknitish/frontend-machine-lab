@@ -2,4 +2,6 @@
 
 pnpm generate:playground
 
+# start server
 
+pnpm run dev
