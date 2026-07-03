@@ -40,7 +40,7 @@ export const Button = ({
    Input
 =========================== */
 
-const Input = ({ type = "text", className = "", ...props }) => {
+export const Input = ({ type = "text", className = "", ...props }) => {
   return (
     <input
       type={type}
@@ -63,7 +63,7 @@ const Input = ({ type = "text", className = "", ...props }) => {
    Checkbox
 =========================== */
 
-const CheckBox = ({ label, checked = false, ...props }) => {
+export const CheckBox = ({ label, checked = false, ...props }) => {
   return (
     <label className="flex items-center gap-2 cursor-pointer">
       <input type="checkbox" checked={checked} {...props} />
@@ -76,7 +76,7 @@ const CheckBox = ({ label, checked = false, ...props }) => {
    Radio
 =========================== */
 
-const Radio = ({ label, checked = false, value, name, ...props }) => {
+export const Radio = ({ label, checked = false, value, name, ...props }) => {
   return (
     <label className="flex items-center gap-2 cursor-pointer">
       <input
@@ -95,7 +95,7 @@ const Radio = ({ label, checked = false, value, name, ...props }) => {
    Select
 =========================== */
 
-const Select = ({
+export const Select = ({
   name,
   value,
   options = [],

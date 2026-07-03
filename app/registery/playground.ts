@@ -23,8 +23,9 @@ import component10 from "../components/easy/UiComponent";
 import component11 from "../components/medium/DynamicTable";
 import component12 from "../components/medium/Pagination";
 import component13 from "../components/medium/PersonSearch";
-import component14 from "../components/medium/TaskManager";
-import component15 from "../components/medium/TicTacToe";
+import component14 from "../components/medium/Tabs";
+import component15 from "../components/medium/TaskManager";
+import component16 from "../components/medium/TicTacToe";
 
 export const playgroundItems: PlaygroundItem[] = [
   {
@@ -112,15 +113,21 @@ export const playgroundItems: PlaygroundItem[] = [
     level: "medium",
   },
   {
+    id: "tabs",
+    title: "Tabs",
+    component: component14,
+    level: "medium",
+  },
+  {
     id: "task-manager",
     title: "Task Manager",
-    component: component14,
+    component: component15,
     level: "medium",
   },
   {
     id: "tic-tac-toe",
     title: "Tic Tac Toe",
-    component: component15,
+    component: component16,
     level: "medium",
   },
 ];
