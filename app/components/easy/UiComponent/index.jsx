@@ -8,10 +8,17 @@ const programmingLanguages = ["JavaScript", "React", "Python"];
    Button
 =========================== */
 
+const VARIANT = {
+  success: "bg-green-200 border-green-500",
+  warning: "bg-yellow-200 border-yellow-500",
+  error: "bg-red-200 border-red-500",
+};
+
 export const Button = ({
   children,
   className = "",
   disabled = false,
+  variant,
   ...props
 }) => {
   return (
@@ -27,7 +34,9 @@ export const Button = ({
             ? "bg-gray-300 cursor-not-allowed"
             : "bg-blue-500 hover:bg-blue-600 text-white"
         }
+        ${variant && VARIANT[variant]}
         ${className}
+        font-medium
       `}
       {...props}
     >
@@ -126,6 +135,30 @@ export const Select = ({
         </option>
       ))}
     </select>
+  );
+};
+
+// Tooltip
+
+const ToolTip = ({ title = "", children }) => {
+  const [show, setShow] = useState(false);
+
+  return (
+    <div className="inline-block relative">
+      <p
+        className="cursor-pointer"
+        onMouseEnter={() => setShow(true)}
+        onMouseLeave={() => setShow(false)}
+      >
+        {children}
+      </p>
+
+      {show && (
+        <p className="absolute mt-1 rounded bg-black px-2 py-1 text-sm text-white">
+          {title}
+        </p>
+      )}
+    </div>
   );
 };
 
@@ -251,6 +284,7 @@ export default function App() {
             <strong>Select:</strong> {selectedOption || "-"}
           </p>
         </section>
+        <ToolTip title="I show on hover">Tooltip</ToolTip>
       </div>
     </div>
   );
