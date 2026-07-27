@@ -19,16 +19,18 @@ import component6 from "../components/easy/DropDown";
 import component7 from "../components/easy/Modal";
 import component8 from "../components/easy/MultiSelect";
 import component9 from "../components/easy/ResizeWindow";
-import component10 from "../components/easy/Toast";
-import component11 from "../components/easy/Todos";
-import component12 from "../components/easy/UiComponent";
-import component13 from "../components/medium/DynamicTable";
-import component14 from "../components/medium/Pagination";
-import component15 from "../components/medium/PersonSearch";
-import component16 from "../components/medium/Tabs";
-import component17 from "../components/medium/TaskManager";
-import component18 from "../components/medium/TicTacToe";
-import component19 from "../components/medium/ToastContainer";
+import component10 from "../components/easy/Stepper";
+import component11 from "../components/easy/Toast";
+import component12 from "../components/easy/Todos";
+import component13 from "../components/easy/UiComponent";
+import component14 from "../components/medium/DynamicTable";
+import component15 from "../components/medium/Pagination";
+import component16 from "../components/medium/PersonSearch";
+import component17 from "../components/medium/TableGrid";
+import component18 from "../components/medium/Tabs";
+import component19 from "../components/medium/TaskManager";
+import component20 from "../components/medium/TicTacToe";
+import component21 from "../components/medium/ToastContainer";
 
 export const playgroundItems: PlaygroundItem[] = [
   {
@@ -92,63 +94,75 @@ export const playgroundItems: PlaygroundItem[] = [
     level: "easy",
   },
   {
+    id: "stepper",
+    title: "Stepper",
+    component: component10,
+    level: "easy",
+  },
+  {
     id: "toast",
     title: "Toast",
-    component: component10,
+    component: component11,
     level: "easy",
   },
   {
     id: "todos",
     title: "Todos",
-    component: component11,
+    component: component12,
     level: "easy",
   },
   {
     id: "ui-component",
     title: "Ui Component",
-    component: component12,
+    component: component13,
     level: "easy",
   },
   {
     id: "dynamic-table",
     title: "Dynamic Table",
-    component: component13,
+    component: component14,
     level: "medium",
   },
   {
     id: "pagination",
     title: "Pagination",
-    component: component14,
+    component: component15,
     level: "medium",
   },
   {
     id: "person-search",
     title: "Person Search",
-    component: component15,
+    component: component16,
+    level: "medium",
+  },
+  {
+    id: "table-grid",
+    title: "Table Grid",
+    component: component17,
     level: "medium",
   },
   {
     id: "tabs",
     title: "Tabs",
-    component: component16,
+    component: component18,
     level: "medium",
   },
   {
     id: "task-manager",
     title: "Task Manager",
-    component: component17,
+    component: component19,
     level: "medium",
   },
   {
     id: "tic-tac-toe",
     title: "Tic Tac Toe",
-    component: component18,
+    component: component20,
     level: "medium",
   },
   {
     id: "toast-container",
     title: "Toast Container",
-    component: component19,
+    component: component21,
     level: "medium",
   },
 ];
