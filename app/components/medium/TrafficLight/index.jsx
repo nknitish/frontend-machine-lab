@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const lights = [
   { id: 0, color: "red", duration: 2000 },
@@ -18,32 +18,23 @@ export default function App() {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
-    let timer;
-
-    timer = setTimeout(() => {
-      setActive((prev) => {
-        if (prev === 0) return prev + 1;
-        if (prev === 2) return 0;
-
-        return prev + 1;
-      });
+    const timer = setTimeout(() => {
+      setActive((prev) => (prev + 1) % lights.length);
     }, lights[active].duration);
 
     return () => clearTimeout(timer);
   }, [active]);
 
   return (
-    <div className="p-5">
-      <div className="bg-black p-4 rounded w-fit">
-        {lights.map((light) => (
-          <div
-            key={light.id}
-            className={`w-12 h-12 rounded-full border mb-2 ${
-              active === light.id ? colors[light.color] : "bg-gray-300"
-            }`}
-          />
-        ))}
-      </div>
+    <div className="flex flex-col items-center gap-2 rounded-lg bg-gray-800 p-4">
+      {lights.map((light) => (
+        <div
+          key={light.id}
+          className={`h-12 w-12 rounded-full border-2 border-gray-600 ${
+            active === light.id ? colors[light.color] : "bg-gray-300"
+          }`}
+        />
+      ))}
     </div>
   );
 }

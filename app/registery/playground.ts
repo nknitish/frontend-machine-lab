@@ -19,20 +19,21 @@ import component6 from "../components/easy/Drawer";
 import component7 from "../components/easy/DropDown";
 import component8 from "../components/easy/Modal";
 import component9 from "../components/easy/MultiSelect";
-import component10 from "../components/easy/ResizeWindow";
-import component11 from "../components/easy/Stepper";
-import component12 from "../components/easy/Toast";
-import component13 from "../components/easy/Todos";
-import component14 from "../components/easy/UiComponent";
-import component15 from "../components/medium/DynamicTable";
-import component16 from "../components/medium/Pagination";
-import component17 from "../components/medium/PersonSearch";
-import component18 from "../components/medium/TableGrid";
-import component19 from "../components/medium/Tabs";
-import component20 from "../components/medium/TaskManager";
-import component21 from "../components/medium/TicTacToe";
-import component22 from "../components/medium/ToastContainer";
-import component23 from "../components/medium/TrafficLight";
+import component10 from "../components/easy/ProgressBar";
+import component11 from "../components/easy/ResizeWindow";
+import component12 from "../components/easy/Stepper";
+import component13 from "../components/easy/Toast";
+import component14 from "../components/easy/Todos";
+import component15 from "../components/easy/UiComponent";
+import component16 from "../components/medium/DynamicTable";
+import component17 from "../components/medium/Pagination";
+import component18 from "../components/medium/PersonSearch";
+import component19 from "../components/medium/TableGrid";
+import component20 from "../components/medium/Tabs";
+import component21 from "../components/medium/TaskManager";
+import component22 from "../components/medium/TicTacToe";
+import component23 from "../components/medium/ToastContainer";
+import component24 from "../components/medium/TrafficLight";
 
 export const playgroundItems: PlaygroundItem[] = [
   {
@@ -96,87 +97,93 @@ export const playgroundItems: PlaygroundItem[] = [
     level: "easy",
   },
   {
+    id: "progress-bar",
+    title: "Progress Bar",
+    component: component10,
+    level: "easy",
+  },
+  {
     id: "resize-window",
     title: "Resize Window",
-    component: component10,
+    component: component11,
     level: "easy",
   },
   {
     id: "stepper",
     title: "Stepper",
-    component: component11,
+    component: component12,
     level: "easy",
   },
   {
     id: "toast",
     title: "Toast",
-    component: component12,
+    component: component13,
     level: "easy",
   },
   {
     id: "todos",
     title: "Todos",
-    component: component13,
+    component: component14,
     level: "easy",
   },
   {
     id: "ui-component",
     title: "Ui Component",
-    component: component14,
+    component: component15,
     level: "easy",
   },
   {
     id: "dynamic-table",
     title: "Dynamic Table",
-    component: component15,
+    component: component16,
     level: "medium",
   },
   {
     id: "pagination",
     title: "Pagination",
-    component: component16,
+    component: component17,
     level: "medium",
   },
   {
     id: "person-search",
     title: "Person Search",
-    component: component17,
+    component: component18,
     level: "medium",
   },
   {
     id: "table-grid",
     title: "Table Grid",
-    component: component18,
+    component: component19,
     level: "medium",
   },
   {
     id: "tabs",
     title: "Tabs",
-    component: component19,
+    component: component20,
     level: "medium",
   },
   {
     id: "task-manager",
     title: "Task Manager",
-    component: component20,
+    component: component21,
     level: "medium",
   },
   {
     id: "tic-tac-toe",
     title: "Tic Tac Toe",
-    component: component21,
+    component: component22,
     level: "medium",
   },
   {
     id: "toast-container",
     title: "Toast Container",
-    component: component22,
+    component: component23,
     level: "medium",
   },
   {
     id: "traffic-light",
     title: "Traffic Light",
-    component: component23,
+    component: component24,
     level: "medium",
   },
 ];
