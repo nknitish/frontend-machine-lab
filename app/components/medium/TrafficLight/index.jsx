@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 
 const lights = [
-  { id: 1, color: "red", duration: 2000 },
-  { id: 2, color: "green", duration: 4000 },
-  { id: 3, color: "yellow", duration: 500 },
+  { id: 0, color: "red", duration: 2000 },
+  { id: 1, color: "green", duration: 4000 },
+  { id: 2, color: "yellow", duration: 1000 },
 ];
 
 const colors = {
@@ -15,11 +15,18 @@ const colors = {
 };
 
 export default function App() {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setActive((prev) => (prev + 1) % lights.length);
+    let timer;
+
+    timer = setTimeout(() => {
+      setActive((prev) => {
+        if (prev === 0) return prev + 1;
+        if (prev === 2) return 0;
+
+        return prev + 1;
+      });
     }, lights[active].duration);
 
     return () => clearTimeout(timer);

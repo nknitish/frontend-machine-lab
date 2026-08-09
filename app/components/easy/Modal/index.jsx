@@ -8,7 +8,7 @@ const Modal = ({ open = false, title = "", handleClose, children }) => {
   if (!open) return null;
 
   return createPortal(
-    <div className="modal">
+    <div>
       <div className="backdrop" onClick={handleClose}>
         <div className="dialog" onClick={(e) => e.stopPropagation()}>
           {/* Header */}

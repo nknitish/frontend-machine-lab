@@ -9,7 +9,7 @@ const Card = ({ value }: { value: number }) => (
 
 const InfiniteScrollWithIntersectionObserver = () => {
   const [data, setData] = useState<number[]>(
-    Array.from({ length: 10 }, (_, i) => i + 1)
+    Array.from({ length: 10 }, (_, i) => i + 1),
   );
   const [isLoading, setIsLoading] = useState(false);
 
@@ -39,7 +39,7 @@ const InfiniteScrollWithIntersectionObserver = () => {
       {
         root: containerRef.current,
         threshold: 0.2,
-      }
+      },
     );
 
     observer.observe(loaderRef.current);
