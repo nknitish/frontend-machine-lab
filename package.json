@@ -10,6 +10,7 @@
     "generate:playground": "node scripts/generate-playground-registry.mjs"
   },
   "dependencies": {
+    "lucide-react": "^1.31.0",
     "next": "16.0.8",
     "react": "19.2.1",
     "react-dom": "19.2.1"
