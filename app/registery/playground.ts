@@ -27,15 +27,18 @@ import component14 from "../components/easy/Toast";
 import component15 from "../components/easy/Todos";
 import component16 from "../components/easy/UiComponent";
 import component17 from "../components/medium/DynamicTable";
-import component18 from "../components/medium/Navigation";
-import component19 from "../components/medium/Pagination";
-import component20 from "../components/medium/PersonSearch";
-import component21 from "../components/medium/TableGrid";
-import component22 from "../components/medium/Tabs";
-import component23 from "../components/medium/TaskManager";
-import component24 from "../components/medium/TicTacToe";
-import component25 from "../components/medium/ToastContainer";
-import component26 from "../components/medium/TrafficLight";
+import component18 from "../components/medium/JsonViewer";
+import component19 from "../components/medium/KeyValeTable";
+import component20 from "../components/medium/Navigation";
+import component21 from "../components/medium/Pagination";
+import component22 from "../components/medium/PersonSearch";
+import component23 from "../components/medium/Postman";
+import component24 from "../components/medium/TableGrid";
+import component25 from "../components/medium/Tabs";
+import component26 from "../components/medium/TaskManager";
+import component27 from "../components/medium/TicTacToe";
+import component28 from "../components/medium/ToastContainer";
+import component29 from "../components/medium/TrafficLight";
 
 export const playgroundItems: PlaygroundItem[] = [
   {
@@ -147,57 +150,75 @@ export const playgroundItems: PlaygroundItem[] = [
     level: "medium",
   },
   {
+    id: "json-viewer",
+    title: "Json Viewer",
+    component: component18,
+    level: "medium",
+  },
+  {
+    id: "key-vale-table",
+    title: "Key Vale Table",
+    component: component19,
+    level: "medium",
+  },
+  {
     id: "navigation",
     title: "Navigation",
-    component: component18,
+    component: component20,
     level: "medium",
   },
   {
     id: "pagination",
     title: "Pagination",
-    component: component19,
+    component: component21,
     level: "medium",
   },
   {
     id: "person-search",
     title: "Person Search",
-    component: component20,
+    component: component22,
+    level: "medium",
+  },
+  {
+    id: "postman",
+    title: "Postman",
+    component: component23,
     level: "medium",
   },
   {
     id: "table-grid",
     title: "Table Grid",
-    component: component21,
+    component: component24,
     level: "medium",
   },
   {
     id: "tabs",
     title: "Tabs",
-    component: component22,
+    component: component25,
     level: "medium",
   },
   {
     id: "task-manager",
     title: "Task Manager",
-    component: component23,
+    component: component26,
     level: "medium",
   },
   {
     id: "tic-tac-toe",
     title: "Tic Tac Toe",
-    component: component24,
+    component: component27,
     level: "medium",
   },
   {
     id: "toast-container",
     title: "Toast Container",
-    component: component25,
+    component: component28,
     level: "medium",
   },
   {
     id: "traffic-light",
     title: "Traffic Light",
-    component: component26,
+    component: component29,
     level: "medium",
   },
 ];
