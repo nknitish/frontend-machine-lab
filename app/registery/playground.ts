@@ -9,216 +9,237 @@ type PlaygroundItem = {
   level: "easy" | "medium" | "advance";
 };
 
-import component0 from "../components/advance/EmailDashboard";
-import component1 from "../components/advance/FileExplorer";
-import component2 from "../components/advance/InfiniteScroll";
-import component3 from "../components/easy/Accordion";
-import component4 from "../components/easy/ColorGrid";
-import component5 from "../components/easy/DragDropImage";
-import component6 from "../components/easy/Drawer";
-import component7 from "../components/easy/DropDown";
-import component8 from "../components/easy/Modal";
-import component9 from "../components/easy/MultiSelect";
-import component10 from "../components/easy/ProgressBar";
-import component11 from "../components/easy/Rating";
-import component12 from "../components/easy/ResizeWindow";
-import component13 from "../components/easy/Stepper";
-import component14 from "../components/easy/Toast";
-import component15 from "../components/easy/Todos";
-import component16 from "../components/easy/UiComponent";
-import component17 from "../components/medium/DynamicTable";
-import component18 from "../components/medium/JsonViewer";
-import component19 from "../components/medium/KeyValeTable";
-import component20 from "../components/medium/Navigation";
-import component21 from "../components/medium/Pagination";
-import component22 from "../components/medium/PersonSearch";
-import component23 from "../components/medium/Postman";
-import component24 from "../components/medium/TableGrid";
-import component25 from "../components/medium/Tabs";
-import component26 from "../components/medium/TaskManager";
-import component27 from "../components/medium/TicTacToe";
-import component28 from "../components/medium/ToastContainer";
-import component29 from "../components/medium/TrafficLight";
+import component0 from "../components/advance/AutoComplete";
+import component1 from "../components/advance/EmailDashboard";
+import component2 from "../components/advance/FileExplorer";
+import component3 from "../components/advance/InfiniteScroll";
+import component4 from "../components/easy/Accordion";
+import component5 from "../components/easy/ColorGrid";
+import component6 from "../components/easy/DragDropImage";
+import component7 from "../components/easy/Drawer";
+import component8 from "../components/easy/DropDown";
+import component9 from "../components/easy/Modal";
+import component10 from "../components/easy/MultiSelect";
+import component11 from "../components/easy/ProgressBar";
+import component12 from "../components/easy/Rating";
+import component13 from "../components/easy/ResizeWindow";
+import component14 from "../components/easy/Stepper";
+import component15 from "../components/easy/Toast";
+import component16 from "../components/easy/Todos";
+import component17 from "../components/easy/UiComponent";
+import component18 from "../components/medium/DataTable";
+import component19 from "../components/medium/DynamicTable";
+import component20 from "../components/medium/FormBuilder";
+import component21 from "../components/medium/JsonViewer";
+import component22 from "../components/medium/KeyValeTable";
+import component23 from "../components/medium/Navigation";
+import component24 from "../components/medium/Pagination";
+import component25 from "../components/medium/PersonSearch";
+import component26 from "../components/medium/Postman";
+import component27 from "../components/medium/TableGrid";
+import component28 from "../components/medium/Tabs";
+import component29 from "../components/medium/TaskManager";
+import component30 from "../components/medium/TicTacToe";
+import component31 from "../components/medium/ToastContainer";
+import component32 from "../components/medium/TrafficLight";
 
 export const playgroundItems: PlaygroundItem[] = [
   {
+    id: "auto-complete",
+    title: "Auto Complete",
+    component: component0,
+    level: "advance",
+  },
+  {
     id: "email-dashboard",
     title: "Email Dashboard",
-    component: component0,
+    component: component1,
     level: "advance",
   },
   {
     id: "file-explorer",
     title: "File Explorer",
-    component: component1,
+    component: component2,
     level: "advance",
   },
   {
     id: "infinite-scroll",
     title: "Infinite Scroll",
-    component: component2,
+    component: component3,
     level: "advance",
   },
   {
     id: "accordion",
     title: "Accordion",
-    component: component3,
+    component: component4,
     level: "easy",
   },
   {
     id: "color-grid",
     title: "Color Grid",
-    component: component4,
+    component: component5,
     level: "easy",
   },
   {
     id: "drag-drop-image",
     title: "Drag Drop Image",
-    component: component5,
+    component: component6,
     level: "easy",
   },
   {
     id: "drawer",
     title: "Drawer",
-    component: component6,
+    component: component7,
     level: "easy",
   },
   {
     id: "drop-down",
     title: "Drop Down",
-    component: component7,
+    component: component8,
     level: "easy",
   },
   {
     id: "modal",
     title: "Modal",
-    component: component8,
+    component: component9,
     level: "easy",
   },
   {
     id: "multi-select",
     title: "Multi Select",
-    component: component9,
+    component: component10,
     level: "easy",
   },
   {
     id: "progress-bar",
     title: "Progress Bar",
-    component: component10,
+    component: component11,
     level: "easy",
   },
   {
     id: "rating",
     title: "Rating",
-    component: component11,
+    component: component12,
     level: "easy",
   },
   {
     id: "resize-window",
     title: "Resize Window",
-    component: component12,
+    component: component13,
     level: "easy",
   },
   {
     id: "stepper",
     title: "Stepper",
-    component: component13,
+    component: component14,
     level: "easy",
   },
   {
     id: "toast",
     title: "Toast",
-    component: component14,
+    component: component15,
     level: "easy",
   },
   {
     id: "todos",
     title: "Todos",
-    component: component15,
+    component: component16,
     level: "easy",
   },
   {
     id: "ui-component",
     title: "Ui Component",
-    component: component16,
+    component: component17,
     level: "easy",
+  },
+  {
+    id: "data-table",
+    title: "Data Table",
+    component: component18,
+    level: "medium",
   },
   {
     id: "dynamic-table",
     title: "Dynamic Table",
-    component: component17,
+    component: component19,
+    level: "medium",
+  },
+  {
+    id: "form-builder",
+    title: "Form Builder",
+    component: component20,
     level: "medium",
   },
   {
     id: "json-viewer",
     title: "Json Viewer",
-    component: component18,
+    component: component21,
     level: "medium",
   },
   {
     id: "key-vale-table",
     title: "Key Vale Table",
-    component: component19,
+    component: component22,
     level: "medium",
   },
   {
     id: "navigation",
     title: "Navigation",
-    component: component20,
+    component: component23,
     level: "medium",
   },
   {
     id: "pagination",
     title: "Pagination",
-    component: component21,
+    component: component24,
     level: "medium",
   },
   {
     id: "person-search",
     title: "Person Search",
-    component: component22,
+    component: component25,
     level: "medium",
   },
   {
     id: "postman",
     title: "Postman",
-    component: component23,
+    component: component26,
     level: "medium",
   },
   {
     id: "table-grid",
     title: "Table Grid",
-    component: component24,
+    component: component27,
     level: "medium",
   },
   {
     id: "tabs",
     title: "Tabs",
-    component: component25,
+    component: component28,
     level: "medium",
   },
   {
     id: "task-manager",
     title: "Task Manager",
-    component: component26,
+    component: component29,
     level: "medium",
   },
   {
     id: "tic-tac-toe",
     title: "Tic Tac Toe",
-    component: component27,
+    component: component30,
     level: "medium",
   },
   {
     id: "toast-container",
     title: "Toast Container",
-    component: component28,
+    component: component31,
     level: "medium",
   },
   {
     id: "traffic-light",
     title: "Traffic Light",
-    component: component29,
+    component: component32,
     level: "medium",
   },
 ];
