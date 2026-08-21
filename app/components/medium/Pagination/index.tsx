@@ -55,7 +55,7 @@ const Pagination = ({ item }: { item: number }) => {
             key={i}
           >
             {i}
-          </button>
+          </button>,
         );
       }
     } else {
@@ -69,7 +69,7 @@ const Pagination = ({ item }: { item: number }) => {
           key={1}
         >
           {1}
-        </button>
+        </button>,
       );
 
       buttons.push(<span>....</span>);
@@ -83,7 +83,7 @@ const Pagination = ({ item }: { item: number }) => {
           }`}
         >
           {maxPage}
-        </button>
+        </button>,
       );
     }
 

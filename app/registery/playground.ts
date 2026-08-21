@@ -34,14 +34,13 @@ import component21 from "../components/medium/JsonViewer";
 import component22 from "../components/medium/KeyValeTable";
 import component23 from "../components/medium/Navigation";
 import component24 from "../components/medium/Pagination";
-import component25 from "../components/medium/PersonSearch";
-import component26 from "../components/medium/Postman";
-import component27 from "../components/medium/TableGrid";
-import component28 from "../components/medium/Tabs";
-import component29 from "../components/medium/TaskManager";
-import component30 from "../components/medium/TicTacToe";
-import component31 from "../components/medium/ToastContainer";
-import component32 from "../components/medium/TrafficLight";
+import component25 from "../components/medium/Postman";
+import component26 from "../components/medium/TableGrid";
+import component27 from "../components/medium/Tabs";
+import component28 from "../components/medium/TaskManager";
+import component29 from "../components/medium/TicTacToe";
+import component30 from "../components/medium/ToastContainer";
+import component31 from "../components/medium/TrafficLight";
 
 export const playgroundItems: PlaygroundItem[] = [
   {
@@ -195,51 +194,45 @@ export const playgroundItems: PlaygroundItem[] = [
     level: "medium",
   },
   {
-    id: "person-search",
-    title: "Person Search",
-    component: component25,
-    level: "medium",
-  },
-  {
     id: "postman",
     title: "Postman",
-    component: component26,
+    component: component25,
     level: "medium",
   },
   {
     id: "table-grid",
     title: "Table Grid",
-    component: component27,
+    component: component26,
     level: "medium",
   },
   {
     id: "tabs",
     title: "Tabs",
-    component: component28,
+    component: component27,
     level: "medium",
   },
   {
     id: "task-manager",
     title: "Task Manager",
-    component: component29,
+    component: component28,
     level: "medium",
   },
   {
     id: "tic-tac-toe",
     title: "Tic Tac Toe",
-    component: component30,
+    component: component29,
     level: "medium",
   },
   {
     id: "toast-container",
     title: "Toast Container",
-    component: component31,
+    component: component30,
     level: "medium",
   },
   {
     id: "traffic-light",
     title: "Traffic Light",
-    component: component32,
+    component: component31,
     level: "medium",
   },
 ];
